@@ -1,0 +1,60 @@
+#loader {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+ /* Spinning circle */
+ .spinner {
+   border: 6px solid #f3f3f3;
+   /* light gray */
+
+   border-top: 6px solid #6B5A4A;
+   ;
+   /* blue spinner color */
+   border-radius: 50%;
+   width: 120px;
+   height: 120px;
+   animation: spin 1s linear infinite;
+   position: relative;
+   justify-content: center;
+ }
+
+ /* Logo in the middle */
+ .logo {
+   width: 100px;
+   height: 100px;
+   z-index: 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ @keyframes spin {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ /* Hide main content until loader is gone */
+ #main-content {
+   display: none;
+ }
+
+ .loading-text {
+   margin-top: 140px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   color: #cab2b2;
+ }
